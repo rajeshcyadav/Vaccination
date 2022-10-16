@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mainColorDark"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:contentInsetEnd="20dp"
+            app:contentInsetStart="20dp"
+            app:title="">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+
+                    android:layout_margin="10dp"
+                    app:cardUseCompatPadding="true">
+
+                <ImageButton
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="false"
+                        android:focusable="false"
+                        android:src="@drawable/ic_hamburger_menu" />
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- <androidx.cardview.widget.CardView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 app:cardBackgroundColor="@color/colorBlack"
+                 app:cardCornerRadius="10dp"
+                 app:cardElevation="10dp"
+                 app:cardUseCompatPadding="true"
+                 android:foreground="?attr/selectableItemBackground"
+                 app:contentPadding="0dp">
+                 <Spinner
+                     android:id="@+id/spinner"
+                     style="@style/mySpinnerItemStyle"
+                     android:layout_width="wrap_content"
+                     android:layout_height="40dp"
+                     android:background="@null"
+                     android:entries="@array/languages"
+                     android:foreground="?attr/selectableItemBackground"
+                     android:spinnerMode="dialog" />
+             </androidx.cardview.widget.CardView>-->
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+</LinearLayout>

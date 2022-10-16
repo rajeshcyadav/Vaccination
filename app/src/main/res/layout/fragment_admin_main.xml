@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.mainscreen.admin.AdminMain">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg"
+            android:orientation="vertical"
+            android:paddingBottom="64dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewAdminNameMain"
+                style="@style/HospitalMainCardCounterText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewCurrentDateAdminMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="TextView"
+                android:textColor="@color/hospitalMainCounterColor"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/linear_layout_divider"
+                android:dividerPadding="16dp"
+                android:orientation="horizontal"
+
+                android:showDividers="middle"
+
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textviewRequestCounterAdminMain"
+                        style="@style/HospitalMainCardCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textSize="32sp"
+                        tools:text="40" />
+
+                    <TextView
+                        style="@style/HospitalMainCardCounterText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="2"
+                        android:text="Pending\nRequests"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textviewUserCounterAdminMain"
+                        style="@style/HospitalMainCardCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="100000" />
+
+                    <TextView
+                        style="@style/HospitalMainCardCounterText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="Users"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:id="@+id/materialCardViewRecordsAdmin"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardViewRequestAdmin"
+            app:layout_constraintStart_toStartOf="@+id/materialCardViewRequestAdmin"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardViewProfileAdmin"
+            app:layout_constraintTop_toTopOf="@+id/materialCardViewProfileAdmin">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="false"
+                android:focusable="false">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#332E9CDB"
+                    app:srcCompat="@drawable/ic_baseline_list_alt_24"
+                    android:adjustViewBounds="false"
+                    android:tint="#2E9CDB"
+                    app:contentPadding="8dp"
+                    android:cropToPadding="true"
+                    app:shapeAppearance="@style/HospitalImageButton"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp" />
+
+            <TextView
+                    android:text="Records"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    style="@style/HospitalMainCardButtonText"
+                    android:focusable="false"
+                    android:clickable="false" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:id="@+id/materialCardViewRequestAdmin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline6">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="false"
+                android:focusable="false">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#333D50F4"
+                    app:srcCompat="@drawable/ic_baseline_pending_actions_24"
+                    android:adjustViewBounds="false"
+                    android:tint="#3D50F4"
+                    app:contentPadding="8dp"
+                    android:cropToPadding="true"
+                    app:shapeAppearance="@style/HospitalImageButton"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:focusable="false"
+                    android:clickable="false" />
+
+            <TextView
+                    android:text="Requests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView14"
+                    style="@style/HospitalMainCardButtonText"
+                    android:focusable="false"
+                    android:clickable="false" />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardViewProfileAdmin"
+        android:layout_width="144dp"
+
+        android:layout_height="144dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardViewUsersAdmin"
+        app:layout_constraintStart_toStartOf="@+id/materialCardViewUsersAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardViewUsersAdmin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="false"
+                android:background="#336B58FF"
+                android:clickable="false"
+                android:cropToPadding="true"
+                android:focusable="false"
+                android:tint="#6B58FF"
+                app:contentPadding="8dp"
+                app:shapeAppearance="@style/HospitalImageButton"
+                app:srcCompat="@drawable/ic_baseline_person_24dp" />
+
+            <TextView
+                style="@style/HospitalMainCardButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Profile" />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            android:id="@+id/materialCardViewUsersAdmin"
+            app:layout_constraintTop_toTopOf="@+id/materialCardViewRequestAdmin"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardViewRequestAdmin">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="false"
+                android:focusable="false">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="false"
+                android:background="#331DB1B1"
+                android:clickable="false"
+                android:cropToPadding="true"
+                android:focusable="false"
+                android:tint="#1DB1B1"
+                app:contentPadding="8dp"
+                app:shapeAppearance="@style/HospitalImageButton"
+                app:srcCompat="@drawable/ic_baseline_person_24" />
+
+            <TextView
+                style="@style/HospitalMainCardButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Users" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline2"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <Button
+            android:id="@+id/buttonAddUserAdminMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/hospitalMainCounterColor"
+            android:includeFontPadding="true"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Add new Account"
+            android:textColor="@color/black"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardViewProfileAdmin" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline6"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline7"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

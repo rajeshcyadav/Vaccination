@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mainscreen.user.VaccineList"
+        android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchViewVaccineListUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="20dp"
+            android:iconifiedByDefault="false"
+            android:background="@color/mainColorBg"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            app:queryHint="Search..."
+            app:showAsAction="always"
+            app:iconifiedByDefault="false" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerViewVaccine" />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">E-Vaccination</string>
+    <string name="dontHaveAccount">Don\'t have an Account?</string>
+    <string name="HaveAccount">Already have an Account?</string>
+    <string name="passwordHint">Password</string>
+    <string name="emailHint">Email</string>
+    <string name="loginButton">Login</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email_label">Email</string>
+    <string name="name_label">Name</string>
+    <string name="dob_label">DOB</string>
+    <string name="gender_label">Gender</string>
+    <string name="phone_number_label">Phone Number</string>
+    <string name="location_label">Location</string>
+    <string name="my_profile_label">My Profile</string>
+    <string name="save_button_label">Save</string>
+    <string name="resend_email_verification">Resend Email Verification</string>
+    <string name="verification_tooltip">Check your Email for Verification link or Send a new verification link.</string>
+    <string name="pref">com.vaccination.pref</string>
+    <string name="prefUsertype">userType</string>
+    <string name="NotAuthorisedSignin">Not authorised. Please select Appropriate user type</string>
+    <string name="permission_denied">We need you to grant permission for Location</string>
+    <string name="permission_denied_permanently">To use this feature you have to enable permission in settings</string>
+    <string name="permission_title">Permission request</string>
+    <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida, tortor in tempus ultricies, erat elit pretium tellus, in varius leo libero a urna. In at tortor nisi.</string>
+    <string name="covidVaccinationCard">Register for Covid Vaccination</string>
+    <string-array name="Genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-Binary</item>
+    </string-array>
+
+    <string-array name="times">
+        <item>11 AM - 12 PM</item>
+        <item>12 PM - 1 PM</item>
+        <item>2 PM - 3 PM</item>
+        <item>3 PM - 4 PM</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userConfirmationVaccineRegistration">I have filled in the fields correctly.</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_evening">Good Evening</string>
+    <string name="hospitalOpen24">Open 24 Hours</string>
+    <string name="Cowin">http://www.cowin.gov.in</string>
+    <string name="DbError">Error occurred while loading Data</string>
+    <string name="timing_label">Timing</string>
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mainscreen.user.VaccineDetails">
+
+
+    <ImageView
+            android:src="@drawable/ic_group_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true" />
+
+    <ImageView
+            android:src="@drawable/syringe"
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:id="@+id/imageView3"
+            app:srcCompat="@drawable/syringe_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2" />
+
+    <TextView
+            android:text="Vaccine Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewVaccineNameDetails"
+            style="@style/CardTitle"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/textViewDiseaseNameDetails"
+        style="@style/VaccineCardBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_baseline_circle_12"
+        android:drawablePadding="4dp"
+        android:text="Disease Name"
+        android:textColor="#606060"
+        android:textSize="16sp"
+        app:drawableTint="#1C6AFF"
+        app:layout_constraintStart_toStartOf="@+id/textViewVaccineNameDetails"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVaccineNameDetails" />
+
+    <TextView
+        android:id="@+id/textView20"
+        style="@style/VaccineCardBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Used"
+        app:layout_constraintStart_toStartOf="@+id/textViewDiseaseNameDetails"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiseaseNameDetails" />
+
+    <TextView
+            android:text="Medicine Form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView22"
+            style="@style/VaccineCardBody"
+            app:layout_constraintTop_toTopOf="@+id/textView20"
+            app:layout_constraintStart_toEndOf="@+id/textViewVaccineAgeDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintHorizontal_bias="0.3" />
+
+    <TextView
+        android:id="@+id/textViewVaccineAgeDetails"
+        style="@style/CardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView25"
+        style="@style/CardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Inject"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/VaccineCardBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hospital Name"
+        app:layout_constraintStart_toStartOf="@+id/textViewVaccineAgeDetails"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVaccineAgeDetails" />
+
+    <TextView
+        android:id="@+id/textViewVaccineHospitalName"
+        style="@style/CardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="middle"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView26"
+        style="@style/CardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="@+id/textViewVaccineAgeDetails"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVaccineHospitalName" />
+
+    <TextView
+        android:id="@+id/textViewVaccineDescriptionDetails"
+        style="@style/VaccineCardBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:maxLines="4"
+        android:text="@string/loremIpsum"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVaccineBookNow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView26"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonVaccineBookNow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#1C6AFF"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Book Now"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

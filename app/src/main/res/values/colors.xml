@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Text Color -->
+    <color name="textColor1">#000000</color>
+    <color name="textColor2">#121212</color>
+    <color name="textColor3">#222222</color>
+    <color name="textColor4">#444444</color>
+    <color name="backgroundColor">#F6FAF9</color>
+    <color name="categoryCardColor">#ffffff</color>
+
+    <!--Text Color (Updated User Main Screen)-->
+    <color name="textTitleColor">#222222</color>
+    <color name="textContentColor">#333333</color>
+
+
+    <!--For better contrast-->
+    <color name="colorDarkBlue">#264653</color>
+    <color name="colorYellow">#e9c46a</color>
+    <color name="colorOrange">#f4a261</color>
+
+    <color name="mainColorDark2">#1F473F</color>
+    <color name="mainColor">#64BDAB</color>
+    <color name="mainColorDark">#298777</color>
+    <color name="mainColorLight">#89F4DF</color>
+    <color name="mainColorBg">#E2EEEC</color>
+    <color name="colorLightBlack">#444444</color>
+    <color name="colorRed">#FF4444</color>
+    <color name="colorRed2">#E80034</color>
+    <color name="darkGray">#222222</color>
+    <color name="colorGray">#888888</color>
+    <color name="colorTextColor">#78B08F</color>
+    <color name="colorSelected">#75C08F</color>
+    <color name="colorBackground">#F6FAF9</color>
+
+    <color name="icon1">#FF493B</color>
+    <color name="icon2">#28C166</color>
+    <color name="icon3">#2F97F8</color>
+    <color name="icon4">#7F53F0</color>
+    <color name="hospitalChipColor">#f8f8f8</color>
+    <color name="userBlue">#1C6AFF</color>
+    <color name="hospitalMainBgColor">#014342</color>
+    <color name="hospitalMainCounterColor">#76E6B6</color>
+
+
+    <color name="tfe_color_primary">#ffa800</color>
+    <color name="tfe_color_primary_dark">#ff6f00</color>
+    <color name="tfe_color_accent">#425066</color>
+
+    <color name="tfe_semi_transparent">#66000000</color>
+    <color name="blue2">#4081FF</color>
+
+
+    <array name="colorPallet1">
+        <item>#ef476f</item>
+        <item>#ffd166</item>
+        <item>#06d6a0</item>
+        <item>#118ab2</item>
+        <item>#073b4c</item>
+    </array>
+
+    <array name="colorPallet2">
+        <item>#264653</item>
+        <item>#2a9d8f</item>
+        <item>#e9c46a</item>
+        <item>#f4a261</item>
+        <item>#e76f51</item>
+    </array>
+
+    <array name="colorPallet2Bg">
+        <item>#33264653</item>
+        <item>#332a9d8f</item>
+        <item>#33e9c46a</item>
+        <item>#33f4a261</item>
+        <item>#33e76f51</item>
+    </array>
+</resources>

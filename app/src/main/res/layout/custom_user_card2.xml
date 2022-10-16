@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="20px"
+                android:layout_height="match_parent"
+                android:background="@color/colorRed"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/shapeableImageViewUserCustomColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexDirection="column"
+                app:justifyContent="space_around"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email Id :"
+                        style="@style/CardTitle"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp" />
+
+                <TextView
+                        android:id="@+id/textViewUserEmailCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        style="@style/CardTitle"
+                        android:layout_marginEnd="8dp"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#CC000000" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uid :"
+                        style="@style/VaccineCardBody"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        android:layout_marginBottom="4dp" />
+
+                <TextView
+                        android:id="@+id/textViewUserUidCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="body"
+                        style="@style/VaccineCardBody"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="#CC202020" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privileges :"
+                    style="@style/VaccineCardBody"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                        android:id="@+id/textViewUserTypeCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="body"
+                        style="@style/VaccineCardBody"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewUserCustom"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="#CC202020" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Propfile Setup Completed :"
+                    style="@style/VaccineCardBody"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                        android:id="@+id/textViewUserProfileCompletedCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="body"
+                        style="@style/VaccineCardBody"
+                        android:layout_marginEnd="8dp"
+
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewUserCustom"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="#CC202020" />
+            </LinearLayout>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

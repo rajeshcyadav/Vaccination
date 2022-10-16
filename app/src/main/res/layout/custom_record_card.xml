@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="20px"
+                android:layout_height="0dp"
+                android:background="@color/colorRed"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/shapeableImageViewRecord"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textviewHospitalNameCustomRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:drawableStart="@drawable/ic_baseline_local_hospital_24"
+            android:drawablePadding="8dp"
+            android:drawableTint="#444"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            android:maxLines="1"
+            android:text="Hospital name"
+            android:textColor="#444"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewStatusCustomRecord"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageViewRecord"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/textviewVaccineDateCustomRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:text="Vaccination Date"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#555"
+                android:drawableTint="#555"
+                app:layout_constraintTop_toBottomOf="@id/textviewHospitalNameCustomRecord"
+                app:layout_constraintStart_toStartOf="@+id/textviewHospitalNameCustomRecord"
+                android:layout_marginTop="8dp" />
+
+        <TextView
+                android:id="@+id/textviewVaccineNameCustomRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:letterSpacing="0.03"
+                android:text="Vaccine name"
+                android:textSize="22sp"
+                style="@style/HospitalMainCardButtonText"
+                app:layout_constraintStart_toStartOf="@+id/textviewVaccineDateCustomRecord"
+                app:layout_constraintTop_toBottomOf="@id/textviewVaccineDateCustomRecord"
+                android:maxLines="1" />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:id="@+id/view3"
+                android:background="@drawable/horizontal_dash"
+                app:layout_constraintTop_toBottomOf="@+id/textviewVaccineNameCustomRecord"
+                android:backgroundTint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView2" />
+
+
+        <TextView
+                android:id="@+id/textviewUserNameCustomRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:letterSpacing="0.03"
+                android:drawableTint="@color/hospitalMainBgColor"
+                android:text="User name"
+                android:textSize="15sp"
+                style="@style/HospitalMainCardButtonText"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="@+id/textviewVaccineNameCustomRecord"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textviewUserContactCustomRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_baseline_contact_phone_24"
+            android:drawablePadding="8dp"
+            android:drawableTint="#555"
+            android:fontFamily="@font/roboto"
+            android:letterSpacing="0.03"
+            android:text="User Contact"
+            android:textColor="#555"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textviewUserNameCustomRecord"
+            app:layout_constraintTop_toBottomOf="@+id/textviewUserNameCustomRecord" />
+
+        <TextView
+                android:id="@+id/textviewUserGenderCustomRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_baseline_wc_24"
+                android:letterSpacing="0.03"
+                android:text="User Gender"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textColor="#555"
+                android:drawableTint="#555"
+                app:layout_constraintTop_toBottomOf="@+id/textviewUserNameCustomRecord"
+                app:layout_constraintBottom_toBottomOf="@+id/textviewUserContactCustomRecord"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+        <TextView
+            android:id="@+id/textviewReasonCustomRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableStart="@drawable/ic_baseline_list_alt_24"
+            android:drawablePadding="8dp"
+            android:drawableTint="#555"
+            android:fontFamily="@font/roboto"
+            android:letterSpacing="0.03"
+            android:text="Cancellation Reason"
+            android:textColor="#555"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textviewUserNameCustomRecord"
+            app:layout_constraintTop_toBottomOf="@+id/textviewUserContactCustomRecord" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline3"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+                android:text="Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewStatusCustomRecord"
+                android:background="@drawable/bg_unknown"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:letterSpacing="0.03"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/textviewVaccineDateCustomRecord"
+                app:layout_constraintTop_toTopOf="@+id/textviewHospitalNameCustomRecord"
+                android:layout_marginEnd="8dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

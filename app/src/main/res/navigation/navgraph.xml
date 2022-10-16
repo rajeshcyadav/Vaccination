@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navgraph"
+        app:startDestination="@id/signIn">
+
+    <fragment
+            android:id="@+id/signIn"
+            android:name="com.example.vaccination.ui.authentication.signin.SignIn"
+            android:label="sign_in_fragment"
+            tools:layout="@layout/sign_in_fragment" >
+        <action
+                android:id="@+id/action_signIn_to_forgotPassword"
+                app:destination="@id/forgotPassword" />
+        <action
+                android:id="@+id/action_signIn_to_signUp"
+                app:destination="@id/signUp" />
+        <action
+                android:id="@+id/action_signIn_to_emailVerification"
+                app:destination="@id/emailVerification" />
+        <action
+            android:id="@+id/action_signIn_to_userProfile"
+            app:destination="@id/userProfile"
+            app:popUpTo="@id/signIn"
+            app:popUpToInclusive="true" />
+        <action
+                android:id="@+id/action_signIn_to_userMain"
+                app:destination="@id/userMain"
+                app:popUpTo="@id/signIn"
+                app:popUpToInclusive="true" />
+        <action
+                android:id="@+id/action_signIn_to_hospitalMain"
+                app:destination="@id/hospitalMain"
+                app:popUpTo="@id/signIn"
+                app:popUpToInclusive="true" />
+        <action
+                android:id="@+id/action_signIn_to_hospitalProfile"
+                app:destination="@id/hospitalProfile"
+                app:popUpTo="@id/signIn"
+                app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signIn_to_adminMain"
+            app:destination="@id/adminMain"
+            app:popUpTo="@id/signIn"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+            android:id="@+id/forgotPassword"
+            android:name="com.example.vaccination.ui.authentication.forgotpassword.ForgotPassword"
+            android:label="forgot_password_fragment"
+            tools:layout="@layout/forgot_password_fragment" >
+        <action
+                android:id="@+id/action_forgotPassword_to_signIn"
+                app:destination="@id/signIn" />
+    </fragment>
+    <fragment
+            android:id="@+id/signUp"
+            android:name="com.example.vaccination.ui.authentication.signup.SignUp"
+            android:label="sign_up_fragment"
+            tools:layout="@layout/sign_up_fragment" >
+        <action
+                android:id="@+id/action_signUp_to_signIn"
+                app:destination="@id/signIn" />
+        <action
+                android:id="@+id/action_signUp_to_emailVerification"
+                app:destination="@id/emailVerification" />
+    </fragment>
+    <fragment
+            android:id="@+id/emailVerification"
+            android:name="com.example.vaccination.ui.authentication.EmailVerification"
+            android:label="EmailVerification" >
+        <action
+                android:id="@+id/action_emailVerification_to_signIn"
+                app:destination="@id/signIn" />
+    </fragment>
+    <fragment
+            android:id="@+id/userProfile"
+            android:name="com.example.vaccination.ui.profile.UserProfile"
+            android:label="fragment_user_profile"
+            tools:layout="@layout/fragment_user_profile" >
+        <action
+                android:id="@+id/action_userProfile_to_userMain"
+                app:destination="@id/userMain" />
+        <action
+                android:id="@+id/action_userProfile_to_adminMain"
+                app:destination="@id/adminMain" />
+        <argument
+                android:name="UserType"
+                app:argType="com.example.vaccination.data.DbNode"
+                android:defaultValue="USER" />
+        <action
+            android:id="@+id/action_userProfile_to_signIn"
+            app:destination="@id/signIn"
+            app:popUpTo="@id/userProfile"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+            android:id="@+id/userMain"
+            android:name="com.example.vaccination.ui.mainscreen.user.UserMain"
+            android:label="fragment_user_main"
+            tools:layout="@layout/fragment_user_main" >
+        <action
+                android:id="@+id/action_userMain_to_vaccineList"
+                app:destination="@id/vaccineList" />
+        <action
+                android:id="@+id/action_userMain_to_userProfile"
+                app:destination="@id/userProfile" />
+        <action
+                android:id="@+id/action_userMain_to_vaccineDetails"
+                app:destination="@id/vaccineDetails" />
+        <action
+            android:id="@+id/action_userMain_to_userRequest"
+            app:destination="@id/userRequest" />
+        <action
+            android:id="@+id/action_userMain_to_userRecord"
+            app:destination="@id/userRecord" />
+        <action
+            android:id="@+id/action_userMain_to_allHospitals"
+            app:destination="@id/allHospitals" />
+    </fragment>
+    <fragment
+            android:id="@+id/vaccineList"
+            android:name="com.example.vaccination.ui.mainscreen.user.VaccineList"
+            android:label="fragment_vaccine_list"
+            tools:layout="@layout/fragment_vaccine_list" >
+        <action
+                android:id="@+id/action_vaccineList_to_vaccineDetails"
+                app:destination="@id/vaccineDetails" />
+        <argument
+                android:name="DiseaseName"
+                app:argType="com.example.vaccination.data.Disease"
+                android:defaultValue="ALL" />
+    </fragment>
+    <fragment
+            android:id="@+id/vaccineDetails"
+            android:name="com.example.vaccination.ui.mainscreen.user.VaccineDetails"
+            android:label="fragment_vaccine_details"
+            tools:layout="@layout/fragment_vaccine_details" >
+        <action
+                android:id="@+id/action_vaccineDetails_to_vaccineRegistration"
+                app:destination="@id/vaccineRegistration" />
+        <argument
+                android:name="Vaccine"
+                app:argType="com.example.vaccination.data.Vaccine" />
+    </fragment>
+    <fragment
+            android:id="@+id/vaccineRegistration"
+            android:name="com.example.vaccination.ui.mainscreen.user.VaccineRegistration"
+            android:label="fragment_vaccine_registration"
+            tools:layout="@layout/fragment_vaccine_registration" >
+        <argument
+                android:name="Vaccine"
+                app:argType="com.example.vaccination.data.Vaccine" />
+        <action
+            android:id="@+id/action_vaccineRegistration_to_userMain"
+            app:destination="@id/userMain"
+            app:popUpTo="@id/vaccineRegistration"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+            android:id="@+id/hospitalMain"
+            android:name="com.example.vaccination.ui.mainscreen.hospital.HospitalMain"
+            android:label="fragment_hospital_main"
+            tools:layout="@layout/fragment_hospital_main" >
+        <action
+                android:id="@+id/action_hospitalMain_to_editVaccine"
+                app:destination="@id/editVaccine" />
+        <action
+            android:id="@+id/action_hospitalMain_to_hospitalProfile"
+            app:destination="@id/hospitalProfile"
+            app:popUpTo="@id/hospitalProfile" />
+        <action
+                android:id="@+id/action_hospitalMain_to_hospitalRecords"
+                app:destination="@id/hospitalRecords" />
+        <action
+                android:id="@+id/action_hospitalMain_to_hospitalRequests"
+                app:destination="@id/hospitalRequests" />
+        <action
+                android:id="@+id/action_hospitalMain_to_hospitalVaccineList"
+                app:destination="@id/hospitalVaccineList" />
+    </fragment>
+    <fragment
+            android:id="@+id/hospitalProfile"
+            android:name="com.example.vaccination.ui.profile.HospitalProfile"
+            android:label="fragment_hospital_profile"
+            tools:layout="@layout/fragment_hospital_profile" >
+        <action
+                android:id="@+id/action_hospitalProfile_to_hospitalMain"
+                app:destination="@id/hospitalMain"
+                app:popUpTo="@id/hospitalProfile"
+                app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_hospitalProfile_to_signIn"
+            app:destination="@id/signIn"
+            app:popUpTo="@id/hospitalProfile"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+            android:id="@+id/editVaccine"
+            android:name="com.example.vaccination.ui.mainscreen.hospital.EditVaccine"
+            android:label="fragment_edit_vaccine"
+            tools:layout="@layout/fragment_edit_vaccine" >
+        <argument
+                android:name="Vaccine"
+                app:argType="com.example.vaccination.data.Vaccine"
+                app:nullable="true"
+                android:defaultValue="@null" />
+    </fragment>
+    <fragment
+            android:id="@+id/hospitalRecords"
+            android:name="com.example.vaccination.ui.mainscreen.hospital.HospitalRecords"
+            android:label="fragment_hospital_records"
+            tools:layout="@layout/fragment_hospital_records" />
+    <fragment
+            android:id="@+id/hospitalRequests"
+            android:name="com.example.vaccination.ui.mainscreen.hospital.HospitalRequests"
+            android:label="fragment_hospital_requests"
+            tools:layout="@layout/fragment_hospital_requests" />
+    <fragment
+            android:id="@+id/hospitalVaccineList"
+            android:name="com.example.vaccination.ui.mainscreen.hospital.HospitalVaccineList"
+            android:label="fragment_hospital_vaccine"
+            tools:layout="@layout/fragment_hospital_vaccine" >
+        <action
+                android:id="@+id/action_hospitalVaccineList_to_editVaccine"
+                app:destination="@id/editVaccine" />
+    </fragment>
+    <fragment
+            android:id="@+id/adminMain"
+            android:name="com.example.vaccination.ui.mainscreen.admin.AdminMain"
+            android:label="fragment_admin_main"
+            tools:layout="@layout/fragment_admin_main" >
+        <action
+                android:id="@+id/action_adminMain_to_adminRecords"
+                app:destination="@id/adminRecords" />
+        <action
+                android:id="@+id/action_adminMain_to_adminAddAccount"
+                app:destination="@id/adminAddAccount" />
+        <action
+                android:id="@+id/action_adminMain_to_adminRequest"
+                app:destination="@id/adminRequest" />
+        <action
+                android:id="@+id/action_adminMain_to_adminUserList"
+                app:destination="@id/adminUserList" />
+        <action
+                android:id="@+id/action_adminMain_to_userProfile"
+                app:destination="@id/userProfile" />
+    </fragment>
+    <fragment
+            android:id="@+id/adminAddAccount"
+            android:name="com.example.vaccination.ui.mainscreen.admin.AdminAddAccount"
+            android:label="fragment_admin_add_account"
+            tools:layout="@layout/fragment_admin_add_account" />
+    <fragment
+            android:id="@+id/adminRecords"
+            android:name="com.example.vaccination.ui.mainscreen.admin.AdminRecords"
+            android:label="fragment_admin_records"
+            tools:layout="@layout/fragment_admin_records" />
+    <fragment
+            android:id="@+id/adminRequest"
+            android:name="com.example.vaccination.ui.mainscreen.admin.AdminRequest"
+            android:label="fragment_admin_request"
+            tools:layout="@layout/fragment_admin_request" />
+    <fragment
+            android:id="@+id/adminUserList"
+            android:name="com.example.vaccination.ui.mainscreen.admin.AdminUserList"
+            android:label="fragment_admin_user_list"
+            tools:layout="@layout/fragment_admin_user_list" />
+    <fragment
+        android:id="@+id/userRecord"
+        android:name="com.example.vaccination.ui.mainscreen.user.UserRecord"
+        android:label="fragment_user_record"
+        tools:layout="@layout/fragment_user_record" />
+    <fragment
+        android:id="@+id/allHospitals"
+        android:name="com.example.vaccination.ui.mainscreen.user.AllHospitals"
+        android:label="fragment_all_hospitals"
+        tools:layout="@layout/fragment_all_hospitals" />
+    <fragment
+        android:id="@+id/userRequest"
+        android:name="com.example.vaccination.ui.mainscreen.user.UserRequest"
+        android:label="fragment_user_request"
+        tools:layout="@layout/fragment_user_request" />
+</navigation>

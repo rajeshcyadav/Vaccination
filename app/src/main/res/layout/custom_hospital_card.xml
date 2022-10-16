@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="4dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewHospitalImageCustom"
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:shapeAppearance="@style/HospitalImageView"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textViewHospitalNameCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:singleLine="true"
+                android:text="Hospital Name"
+                android:textColor="#E6000000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHospitalTimeCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/hospitalOpen24"
+                android:textColor="#68CB57"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHospitalAddressCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:maxLines="3"
+                android:text="@string/loremIpsum"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipHospitalDistanceCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:checkable="false"
+                    android:fontFamily="@font/roboto_bold"
+                    android:includeFontPadding="true"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="150 M"
+                    android:textColor="#505050"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:chipBackgroundColor="@color/hospitalChipColor"
+                    app:chipIcon="@drawable/ic_red_location_on_24"
+                    app:chipIconSize="18dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipHospitalStarsCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="0"
+                    android:checkable="false"
+                    android:fontFamily="@font/roboto_bold"
+                    android:includeFontPadding="true"
+                    android:text="4.6"
+                    android:textColor="#505050"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:chipBackgroundColor="@color/hospitalChipColor"
+                    app:chipIcon="@drawable/ic_yellow_star_rate_24"
+                    app:chipIconSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

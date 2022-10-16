@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.profile.HospitalProfile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <View
+                android:id="@+id/rectangle_2"
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/my_profile_label"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageDoc"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:src="@drawable/user_shape"
+                app:shapeAppearance="@style/ProfileImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                android:layout_marginTop="16dp" />
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/profile_imageDoc"
+                android:layout_marginTop="16dp"
+                android:id="@+id/linearLayout3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:labelFor="@id/editTextNameDoc"
+                    android:text="@string/name_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/editTextNameDoc"
+                    app:layout_constraintStart_toStartOf="@+id/editTextNameDoc"
+                    android:layout_margin="4dp" />
+
+            <EditText
+                    android:id="@+id/editTextNameDoc"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:backgroundTint="@color/mainColor"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:layout_margin="4dp" />
+
+            <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:labelFor="@id/editTextEmailDoc"
+                    android:text="@string/email_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp" />
+
+            <EditText
+                    android:id="@+id/editTextEmailDoc"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="email"
+                    android:backgroundTint="@color/mainColor"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:layout_margin="4dp" />
+
+
+            <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:labelFor="@id/editTextPhoneDoc"
+                    android:text="@string/phone_number_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/editTextPhoneDoc"
+                    app:layout_constraintStart_toStartOf="@+id/editTextPhoneDoc"
+                    android:layout_margin="4dp" />
+
+            <EditText
+                    android:id="@+id/editTextPhoneDoc"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="phone"
+                    android:backgroundTint="@color/mainColor"
+                    android:ems="10"
+                    android:inputType="phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chipGrpTiming"
+                    android:layout_margin="4dp" />
+
+            <!--<EditText
+            android:id="@+id/editTextSpeciality"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:autofillHints="phone"
+            android:backgroundTint="@color/mainColor"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDobDoc" />-->
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:labelFor="@id/radioGroupHospitalTime"
+                    android:text="@string/timing_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/chipGrpTiming"
+                    app:layout_constraintStart_toStartOf="@+id/chipGrpTiming"
+                    android:layout_margin="4dp" />
+
+            <RadioGroup
+                    android:id="@+id/radioGroupHospitalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@id/radio24Hours">
+
+                <RadioButton
+                        android:id="@+id/radio24Hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open 24 Hours" />
+
+                <RadioButton
+                        android:id="@+id/radio12Hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open 12 Hours(Morning)" />
+            </RadioGroup>
+
+            <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:labelFor="@id/editTextLocationDoc"
+                    android:text="@string/location_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/editTextLocationDoc"
+                    app:layout_constraintStart_toStartOf="@+id/editTextLocationDoc"
+                    android:layout_margin="4dp" />
+
+            <EditText
+                    android:id="@+id/editTextLocationDoc"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="postalCode"
+                    android:backgroundTint="@color/mainColor"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextPhoneDoc"
+                    android:layout_margin="4dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonProfileSaveDoc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:backgroundTint="@color/mainColor"
+            android:elevation="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/save_button_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        <Button
+            android:id="@+id/buttonProfileLogOutHospital"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="28dp"
+            android:backgroundTint="@color/colorRed"
+            android:elevation="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Log out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonProfileSaveDoc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
